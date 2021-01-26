@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Created a Simple contact form api only app in rails 6. Which is created to give the API end point to create the contact in the database. I have created 2 API basic create API for messages(Used messages instead of contact). And other to list all the available message in the system.
 
-Things you may want to cover:
+I have used the Action Mailer for sending the email after creating the message in the db. I have used Gmail SMTP setting in the development which require gmail username and gmail password to send email. In production we can cnage the host to the company URL and set the Gmail username and password.
 
-* Ruby version
+I have normally used the Rails Internationalization for the static text in the application and used for the en language by default.
 
-* System dependencies
+* Ruby version = 2.6.3
+* Rails version = Rails 6.1.1
 
-* Configuration
+Below are the sample API enpoints and there required parameter.
 
-* Database creation
+POST
+message create request
+http://localhost:3000/messages
+getting the messages saved in db
 
-* Database initialization
+Request Headers
+Content-Type
+application/json
+Bodyraw (json)
+JSON
+{
+  "message": {
+    "first_name": "himanshu",
+    "last_name": "tiwari",
+    "email": "ht.28792@gmail.com",
+    "phone": "7869500841",
+    "body": "This is the test message."
+  }
+}
+GET
+Message index
+http://localhost:3000/messages
+get all the messages in the db
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+POST
+message create request
+GET
+Message index
 
-* Deployment instructions
-
-* ...
