@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>= t('mailer.body', name: @message.first_name)</p>
+    <p>
+    Order details<br>
+    </p>
+    <p>= t('name'): "#{@message.first_name} #{@message.last_name}"</p>
+    <p>= t('email'): <%= @message.email %></p>
+    <p>= t('phone'): <%= @message.phone %></p>
+    <p>= t('message'):<br>
+    </p>
+    <p><%= @message.body %></p>
+  </body>
+</html>
