@@ -16,10 +16,7 @@ message create request
 http://localhost:3000/messages
 getting the messages saved in db
 
-Request Headers
-Content-Type
-application/json
-Bodyraw (json)
+
 JSON
 {
   "message": {
@@ -30,11 +27,11 @@ JSON
     "body": "This is the test message."
   }
 }
+
 GET
 Message index
 http://localhost:3000/messages
 get all the messages in the db
-
 
 POST
 message create request
