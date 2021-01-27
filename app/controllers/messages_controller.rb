@@ -21,20 +21,6 @@ class MessagesController < ApplicationController
     end
   end
 
-  # to update contact form in db
-  def update
-    if @message.update(message_params)
-      render json: @message
-    else
-      render json: @message.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /messages/1
-  def destroy
-    @message.destroy
-  end
-
   private
     def set_message
       @message = Message.find(params[:id])
